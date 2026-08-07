@@ -1,0 +1,183 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4023e8b53ee0fcc44b1a571c51503d59, type: 3}
+  m_Name: ItemInfoDictionary
+  m_EditorClassIdentifier: Assembly-CSharp::ItemInfoDictionary
+  items:
+  - item: 1
+    prefab: {fileID: 2535192995623838472, guid: f823c66d4c4f8fd41936cb164f8abb90, type: 3}
+    icon: {fileID: 946386665, guid: 00b21878499d278489f9d31094acad82, type: 3}
+    value: 5
+    unsellable: 0
+    action1:
+      action:
+        m_PersistentCalls:
+          m_Calls:
+          - m_Target: {fileID: 11400000, guid: ad9df78af6e742d4f8f36b58074ea5d6, type: 2}
+            m_TargetAssemblyTypeName: ItemActions, Assembly-CSharp
+            m_MethodName: Eat
+            m_Mode: 0
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
+      verb: Eat
+    action2:
+      action:
+        m_PersistentCalls:
+          m_Calls:
+          - m_Target: {fileID: 11400000, guid: ad9df78af6e742d4f8f36b58074ea5d6, type: 2}
+            m_TargetAssemblyTypeName: ItemActions, Assembly-CSharp
+            m_MethodName: 
+            m_Mode: 1
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
+      verb: 
+    action3:
+      action:
+        m_PersistentCalls:
+          m_Calls:
+          - m_Target: {fileID: 11400000, guid: ad9df78af6e742d4f8f36b58074ea5d6, type: 2}
+            m_TargetAssemblyTypeName: ItemActions, Assembly-CSharp
+            m_MethodName: 
+            m_Mode: 1
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
+      verb: 
+  - item: 2
+    prefab: {fileID: 2535192995623838472, guid: 4d8eca3259a62184c9716a105a1f6d15, type: 3}
+    icon: {fileID: 2067142826, guid: 665df00cb707a6f4d82d810e89b4a43e, type: 3}
+    value: 0
+    unsellable: 1
+    action1:
+      action:
+        m_PersistentCalls:
+          m_Calls:
+          - m_Target: {fileID: 11400000, guid: ad9df78af6e742d4f8f36b58074ea5d6, type: 2}
+            m_TargetAssemblyTypeName: ItemActions, Assembly-CSharp
+            m_MethodName: 
+            m_Mode: 0
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: 
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
+      verb: 
+    action2:
+      action:
+        m_PersistentCalls:
+          m_Calls:
+          - m_Target: {fileID: 11400000, guid: ad9df78af6e742d4f8f36b58074ea5d6, type: 2}
+            m_TargetAssemblyTypeName: 
+            m_MethodName: 
+            m_Mode: 0
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: 
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
+      verb: 
+    action3:
+      action:
+        m_PersistentCalls:
+          m_Calls:
+          - m_Target: {fileID: 11400000, guid: ad9df78af6e742d4f8f36b58074ea5d6, type: 2}
+            m_TargetAssemblyTypeName: ItemActions, Assembly-CSharp
+            m_MethodName: Eat
+            m_Mode: 0
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
+      verb: Eat
+  - item: 3
+    prefab: {fileID: 2535192995623838472, guid: e775b0b44755cd140b1a46e6df0dcb36, type: 3}
+    icon: {fileID: -1171254686, guid: 93d2a3251d78a45498361a83dc3b36b8, type: 3}
+    value: 0
+    unsellable: 1
+    action1:
+      action:
+        m_PersistentCalls:
+          m_Calls:
+          - m_Target: {fileID: 11400000, guid: ad9df78af6e742d4f8f36b58074ea5d6, type: 2}
+            m_TargetAssemblyTypeName: 
+            m_MethodName: 
+            m_Mode: 0
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: 
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
+      verb: 
+    action2:
+      action:
+        m_PersistentCalls:
+          m_Calls:
+          - m_Target: {fileID: 11400000, guid: ad9df78af6e742d4f8f36b58074ea5d6, type: 2}
+            m_TargetAssemblyTypeName: 
+            m_MethodName: 
+            m_Mode: 0
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: 
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
+      verb: 
+    action3:
+      action:
+        m_PersistentCalls:
+          m_Calls:
+          - m_Target: {fileID: 11400000, guid: ad9df78af6e742d4f8f36b58074ea5d6, type: 2}
+            m_TargetAssemblyTypeName: ItemActions, Assembly-CSharp
+            m_MethodName: Eat
+            m_Mode: 0
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
+      verb: Eat

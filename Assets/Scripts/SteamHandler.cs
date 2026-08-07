@@ -1,0 +1,73 @@
+using Mirror;
+using Steamworks;
+using UnityEngine;
+
+public class SteamHandler : Singleton<SteamHandler>
+{
+	private Callback<LobbyCreated_t> createCallback;
+
+	private Callback<GameLobbyJoinRequested_t> joinCallback;
+
+	private Callback<LobbyEnter_t> enterCallback;
+
+	private CSteamID lobbyId;
+
+	private bool initialized;
+
+	public CSteamID LobbyID => lobbyId;
+
+    public void OnInit()
+	{
+		createCallback = Callback<LobbyCreated_t>.Create(LobbyCreated);
+		joinCallback = Callback<GameLobbyJoinRequested_t>.Create(LobbyJoined);
+		enterCallback = Callback<LobbyEnter_t>.Create(LobbyEntered);
+		initialized = true;
+		Debug.Log("Steam initialized successfully");
+	}
+
+	public void OnInitFailed()
+	{
+		
+	}
+
+	public void Host()
+	{
+		if (initialized)
+		{
+			SteamMatchmaking.CreateLobby(ELobbyType.k_ELobbyTypeFriendsOnly, NetworkManager.singleton.maxConnections);
+		} else
+		{
+			Debug.LogWarning("Steam not initialized");
+		}
+	}
+
+	private void LobbyCreated(LobbyCreated_t data)
+	{
+		if (data.m_eResult == EResult.k_EResultOK)
+		{
+			Debug.Log("hosting lobby");
+			NetworkManager.singleton.StartHost();
+			lobbyId = new CSteamID(data.m_ulSteamIDLobby);
+			SteamMatchmaking.SetLobbyData(lobbyId, "CSID", SteamUser.GetSteamID().ToString());
+		} else
+		{
+			Debug.Log("Starting Offline");
+			NetworkManager.singleton.StartHost();
+		}
+	}
+
+	private void LobbyJoined(GameLobbyJoinRequested_t data)
+	{
+		SteamMatchmaking.JoinLobby(data.m_steamIDLobby);
+	}
+
+	private void LobbyEntered(LobbyEnter_t data)
+	{
+		if (!NetworkServer.active)
+		{
+			string lobbyData = SteamMatchmaking.GetLobbyData(new CSteamID(data.m_ulSteamIDLobby), "CSID");
+			NetworkManager.singleton.networkAddress = lobbyData;
+			NetworkManager.singleton.StartClient();
+		}
+	}
+}
